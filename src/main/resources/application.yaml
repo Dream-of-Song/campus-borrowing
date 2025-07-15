@@ -1,18 +1,24 @@
 server:
-port: 8810
+  port: 8810
 
 spring:
-servlet:
-  multipart:
-    max-file-size: 10MB
-    max-request-size: 100MB
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+  datasource:
+    url: jdbc:mysql://localhost:3333/sharing_platform_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis-plus:
-configuration:
-  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 # 生产环境配置示例（可用环境变量覆盖）
 file:
-update_dir:
-  image: /prod/images/
-  file: /prod/files/
+  update_dir:
+    image: /prod/images/
+    file: /prod/files/
