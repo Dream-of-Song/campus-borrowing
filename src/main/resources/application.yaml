@@ -1,18 +1,18 @@
 server:
-port: 8810
+  port: 8810
 
 spring:
-servlet:
-  multipart:
-    max-file-size: 10MB
-    max-request-size: 100MB
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
 
 mybatis-plus:
-configuration:
-  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 # 生产环境配置示例（可用环境变量覆盖）
 file:
-update_dir:
-  image: /prod/images/
-  file: /prod/files/
+  update_dir:
+    image: /prod/images/
+    file: /prod/files/
